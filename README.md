@@ -154,7 +154,9 @@ In the Job name field type a name. In the Environment field select Production an
 
 To run the new created job click the Run now button.  
 
-We can see a dataset created in our BigQuery console with the stg_car_sales table inside.  
+We can see the job result by clicking on the job name.
+
+If the job run without problems we will be able to see a dataset created in our BigQuery console with the stg_car_sales table inside.  
 
 Now we are ready to visualize the data.  
 
