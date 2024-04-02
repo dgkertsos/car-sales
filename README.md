@@ -102,6 +102,10 @@ After the pipeline is executed a partitioned table called **car_sales** is creat
 
 **Create a model in dbt Cloud**
 
+In GitHub search for dgkertsos/car-sales, click on the result and then click on the Fork button. Review the settings and click on the Create Fork button.  
+
+Go to Code and copy the SSH address starting with git@  
+
 Sign up for a free account id dbt cloud  
 
 Go to Account Settings, Projects and then click +New Project  
@@ -118,14 +122,20 @@ In the Dataset field, type the name for the Dataset which will be crated by the 
 
 Click on the Test Connection button. Dbt cloud will try to connect to your Google Cloud Platform. If everything is OK, Next button appears. Click on it to continue.  
 
-Then we have to setup the repository which means where our dbt cloud project is stored. Select Managed and in the Repository name type the following address:  
+Then we have to setup the repository which means where our dbt cloud project is stored. 
 
-https://github.com/dgkertsos/car-sales.git
+Select Git Clone and in the Git URL type the SSH address you have copied earlier, starting with git@  
 
 Click the Import Button  
 
-Now we are connected to the repository.  
+A new SSH-RSA key is created. Copy the created key. Then go to GitHub Settings, SSH and GPG Keys. 
 
-Click the Next button.  
+Click the New SSH key button. 
 
-Now we can click on the Start developing in the IDE link.  
+Type a title, eg SSHKey and in the key field paste the key from the previous step.  
+
+Click on the Add SSH key button.  
+
+Back in dbt Cloud click the Next button and then on the Start Developing in the IDE link.  
+
+Click on the Initialize dbt project.  
