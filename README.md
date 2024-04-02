@@ -112,6 +112,10 @@ Go to Account Settings, Projects and then click +New Project
 
 Enter a Project name, eg car-sales  and then click Continue  
 
+In the Project subdirectory field type: dbt  
+
+This is the folder name where the dbt project resides.  
+
 Choose a connection, in our case BigQuery and click Next.
 
 Click Upload a Service Account JSON file and select the JSON file you have downloaded from Google Cloud Platform.  
@@ -138,4 +142,8 @@ Click on the Add SSH key button.
 
 Back in dbt Cloud click the Next button and then on the Start Developing in the IDE link.  
 
-Click on the Initialize dbt project.  
+Now you can type dbt build. The dbt project compiles and now if we connect to our BigQuery console we can see that a dataset is created with a table stg_car_sales inside.  
+
+Now we are ready to visualize the data.  
+
+**Visualize data**  
