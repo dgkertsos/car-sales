@@ -4,7 +4,7 @@ This is the final project for the DataTalks Club Data Engineering Zoomcamp 2024.
 
 In this project we will display used car sales in the United States.
 
-**Dataset**  
+## Dataset  
 
 We will use the Vehicles Sales dataset from Kaggle. The dataset can be found in the URL below:  
 
@@ -14,7 +14,7 @@ as a zip file.
 
 The file can also be found in the data folder.
 
-**First steps**  
+## First steps  
 
 Create a folder in your hard drive:  
 
@@ -28,7 +28,7 @@ Then clone this project by typing:
 
 git clone https://github.com/dgkertsos/car-sales.git
 
-**Create a GCP bucket and a BigQuery Dataset**  
+## Create a GCP bucket and a BigQuery Dataset  
 
 The GCP bucket will be used to store the data from the car-prices.zip file in a partitioned parquet format. Then the data will be transferred to a BigQuery table which is stored in the created dataset. We will do the transfer with the help of Mage.
 
@@ -63,7 +63,7 @@ Then from the terraform directory we execute:
 
 The bucket is created in our GCP storage and the dataset will be created in our bigquery datasets.
 
-**Run Mage**  
+## Create pipelines with Mage  
 
 Before running Mage do the following changes to the files:  
 
@@ -100,7 +100,7 @@ Select the **gcs_to_bq** pipeline and execute each block one by one or else sele
 
 After the pipeline is executed a partitioned table called **car_sales** is created in the **de_zoomcamp_car_sales** dataset and then all the data from the bucket are transfered to this table. There should be 558811 records in the table.  
 
-**Create a model in dbt Cloud**
+## Create a model in dbt Cloud
 
 In GitHub search for dgkertsos/car-sales, click on the result and then click on the Fork button. Review the settings and click on the Create Fork button.  
 
@@ -146,4 +146,4 @@ Now you can type dbt build. The dbt project compiles and now if we connect to ou
 
 Now we are ready to visualize the data.  
 
-**Visualize data**  
+## Visualize data
