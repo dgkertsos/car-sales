@@ -161,3 +161,13 @@ If the job run without problems we will be able to see a dataset created in our 
 Now we are ready to visualize the data.  
 
 ## Visualize data
+
+Go to https://lookerstudio.google.com/ and connect with you Google credentials, the ones you used to set up the Google Cloud Platform.  
+
+Click on the Blank Report button and then click on the BigQuery button.  
+
+Select your Project, Dataset and Table and then click on the Add button. Finally click on the Add to Report button.
+
+The dataset is added to our blank report and now we are ready to start building.
+
+You can see my report by clicking the link [here](https://lookerstudio.google.com/reporting/318a9f8e-f259-434d-aaf1-0756e7458719)
