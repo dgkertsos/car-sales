@@ -170,4 +170,4 @@ Select your Project, Dataset and Table and then click on the Add button. Finally
 
 The dataset is added to our blank report and now we are ready to start building.
 
-You can see my report by clicking the link [here](<a href="https://lookerstudio.google.com/reporting/318a9f8e-f259-434d-aaf1-0756e7458719" target="_blank">here</a>)
+You can see my report by clicking the link <a href="https://lookerstudio.google.com/reporting/318a9f8e-f259-434d-aaf1-0756e7458719" target="_blank">here</a>.
