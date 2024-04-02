@@ -142,7 +142,19 @@ Click on the Add SSH key button.
 
 Back in dbt Cloud click the Next button and then on the Start Developing in the IDE link.  
 
-Now you can type dbt build. The dbt project compiles and now if we connect to our BigQuery console we can see that a dataset is created with a table stg_car_sales inside.  
+Go to Deploy, Environments and click on the +Create Environment button.  
+
+Name your environment, eg Production and in the deployment type select PROD. Finally in the Dataset field type a Dataset name, eg. dbt_car_sales.  
+
+Click Save.  
+
+Go to Deploy, Jobs and click on the +Create Job button. Select Deploy Job.
+
+In the Job name field type a name. In the Environment field select Production and finally click the Save button.  
+
+To run the new created job click the Run now button.  
+
+We can see a dataset created in our BigQuery console with the stg_car_sales table inside.  
 
 Now we are ready to visualize the data.  
 
