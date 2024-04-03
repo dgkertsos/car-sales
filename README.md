@@ -107,7 +107,7 @@ Then you can access Mage by typing:
 
 in your browser.
 
-**NOTE**
+**NOTE**  
 If Linux runs on a virtual machine you have to forward port 6789 on your local machine first.  
 
 You can see instructions on how to forward a port by using VS Code [here](https://kumaranil3921.medium.com/a-step-by-step-guide-to-port-forwarding-with-visual-studio-code-vscode-42a6abff045)  
