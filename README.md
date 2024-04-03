@@ -63,9 +63,9 @@ The service account can be created with the following roles:
     
 Then from the terraform directory we execute:
 
-    ```terraform init```
-    ```terraform plan```
-    ```terraform apply```
+ ```terraform init
+    terraform plan
+    terraform apply```  
 
     Type yes and hit Enter.
 
