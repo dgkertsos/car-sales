@@ -2,8 +2,18 @@ version: 2
 
 sources:
   - name: staging
-    database: avian-casing-411221
+    database: 
     schema: de_zoomcamp_car_sales
 
     tables:
       - name: car_sales
+
+models:
+  - name: stg_car_sales
+    description: A model for used car sales
+
+    columns:
+      - name: year
+        description: The manufacturing year of the vehicle.
+      - name: make
+        description: The brand or manufacturer of the vehicle.
