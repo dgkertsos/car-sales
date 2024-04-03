@@ -30,6 +30,7 @@ Then clone this project by typing:
 
 ```git clone https://github.com/dgkertsos/car-sales.git```
 
+You can see instructions on how to install git on a Linux machine [here](https://github.com/git-guides/install-git)  
 
 ## Create a GCP bucket and a BigQuery Dataset with Terraform  
 
