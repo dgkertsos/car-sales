@@ -63,13 +63,13 @@ The service account can be created with the following roles:
     
 Then from the terraform directory we execute:
 
- ```terraform init```
-    terraform plan
-    terraform apply  
+ ```terraform init```  
+ ```terraform plan```  
+ ```terraform apply```  
 
-    Type yes and hit Enter.
+Type yes and hit Enter.  
 
-The bucket is created in our GCP storage and the dataset will be created in our bigquery datasets.
+The bucket is created in our GCP storage and the dataset will be created in our bigquery datasets.  
 
 ## Create pipelines with Mage  
 
