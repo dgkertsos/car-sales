@@ -103,7 +103,7 @@ And finally:
 **NOTE**  
 You have to install docker first to make the last command run.  
 
-You can see instructions on how to install terraform on a Linux machine [here](https://docs.docker.com/engine/install/)  
+You can see instructions on how to install docker engine on a Linux machine [here](https://docs.docker.com/engine/install/)  
 
 Then you can access Mage by typing:  
 
@@ -125,6 +125,8 @@ Select the **gcs_to_bq** pipeline and execute each block one by one or else sele
 After the pipeline is executed a partitioned table called **car_sales** is created in the **de_zoomcamp_car_sales** dataset and then all the data from the bucket are transfered to this table. There should be 558811 records in the table.  
 
 ## Create a model in dbt Cloud
+
+We will create a model in dbt Cloud because we want to perform some transformations to the data, eg. replace null values.  
 
 In GitHub search for dgkertsos/car-sales, click on the result and then click on the Fork button. Review the settings and click on the Create Fork button.  
 
