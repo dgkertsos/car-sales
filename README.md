@@ -75,6 +75,10 @@ The bucket is created in our GCP storage and the dataset will be created in our 
 
 ## Create pipelines with Mage  
 
+Pipeline **csv_to_gcs** is used to transfer data from the car-prices.zip to the gcp bucket.  
+
+Pipeline **gcs_to_bq** is used to transfer data from the gcp bucket to a BigQuery table.  
+
 Before running Mage do the following changes to the files:  
 
   1. In mage/data_exporters/bl_upload_data_to_gcs.py replace bucket name with your bucket name.
