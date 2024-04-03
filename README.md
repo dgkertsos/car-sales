@@ -20,11 +20,11 @@ For the purposes of this project a Linux machine has been used.
 
 Create a folder in your hard drive:  
 
-mkdir project   
+```mkdir project```   
 
 Change to the folder you just created:  
 
-cd project  
+```cd project```  
 
 Then clone this project by typing:  
 
