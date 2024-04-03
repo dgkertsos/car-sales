@@ -28,16 +28,19 @@ cd project
 
 Then clone this project by typing:  
 
-##
-  ```git clone https://github.com/dgkertsos/car-sales.git```
+```git clone https://github.com/dgkertsos/car-sales.git```
 
 You can see instructions on how to install git on a Linux machine [here](https://github.com/git-guides/install-git)  
 
 ## Create a GCP bucket and a BigQuery Dataset with Terraform  
 
-The GCP bucket will be used to store the data from the car-prices.zip file in a partitioned parquet format. Then the data will be transferred to a BigQuery table which is stored in the created dataset. We will do the transfer with the help of Mage.
+The GCP bucket will be used to store the data from the car-prices.zip file in a parquet format file. Then the data will be transferred to a BigQuery table which is stored in the created dataset. We will do the transfer with the help of Mage.
 
- For this we will use terraform which must be installed on our computer. Then we have to modify the main.tf file located in the terraform folder. We are going to make the following changes:
+ For this we will use terraform which must be installed on our computer. 
+
+ You can see instructions on how to install terraform on a Linux machine [here](https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli)
+ 
+ Then we have to modify the main.tf file located in the terraform folder. We are going to make the following changes:
 
     1. For the provider
         a. Replace the project ID with your GCP project ID
