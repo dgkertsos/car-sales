@@ -99,13 +99,18 @@ And finally:
 **NOTE**  
 You have to install docker first to make the last command run.  
 
-Forward port 6789 on your local machine.  
+You can see instructions on how to install terraform on a Linux machine [here](https://docs.docker.com/engine/install/)  
 
 Then you can access Mage by typing:  
 
-http://localhost:6789  
+```http://localhost:6789```  
 
 in your browser.
+
+**NOTE**
+If Linux runs on a virtual machine you have to forward port 6789 on your local machine first.  
+
+You can see instructions on how to forward a port by using VS Code [here](https://kumaranil3921.medium.com/a-step-by-step-guide-to-port-forwarding-with-visual-studio-code-vscode-42a6abff045)  
 
 Select the **csv_to_gcs** pipeline and execute each block one by one or else select the last block, click on **...** and then select **Execute with all upstream blocks**  
 
