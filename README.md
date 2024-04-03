@@ -12,9 +12,11 @@ https://www.kaggle.com/datasets/syedanwarafridi/vehicle-sales-data
 
 as a zip file.
 
-The file can also be found in the data folder.
+The file can also be found in the project **data** folder.
 
 ## First steps  
+
+For the purposes of this project a Linux machine has been used.
 
 Create a folder in your hard drive:  
 
@@ -24,9 +26,10 @@ Change to the folder you just created:
 
 cd project  
 
-Then clone this project by typing:
+Then clone this project by typing:  
 
-git clone https://github.com/dgkertsos/car-sales.git
+```git clone https://github.com/dgkertsos/car-sales.git```
+
 
 ## Create a GCP bucket and a BigQuery Dataset with Terraform  
 
