@@ -57,7 +57,7 @@ For the dataset
   
 We also have to paste the contents of our service account json file to the keys/tf_service_account.json file. 
 
-NOTE:  
+**NOTE**  
 The service account can be created with the following roles:  
     Storage Admin  
     BigQuery Admin  
@@ -91,7 +91,7 @@ And finally:
 
 docker-compose up  
 
-NOTE  
+**NOTE**  
 You have to install docker first to make the last command run.  
 
 Forward port 6789 on your local machine.  
