@@ -80,16 +80,21 @@ Before running Mage do the following changes to the files:
   1. In mage/data_exporters/bl_upload_data_to_gcs.py replace bucket name with your bucket name.
   2. In mage/data_loaders/bl_load_data_from_gcs.py replace bucket name with your bucket name.
   3. Paste the contents of your service account json file to the keys/mage_service_account.json file. 
-     
+
+**NOTE**  
+The service account can be created with the following roles:  
+    Storage Admin  
+    BigQuery Admin  
+    
 Then you run the following commands:  
 
-cd mage  
-cp dev.env .env  
-rm dev.env  
+```cd mage```  
+```cp dev.env .env```  
+```rm dev.env```  
 
 And finally:  
 
-docker-compose up  
+```docker-compose up```  
 
 **NOTE**  
 You have to install docker first to make the last command run.  
