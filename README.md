@@ -44,15 +44,17 @@ Then we have to modify the main.tf file located in the terraform folder. We are 
 
 For the provider  
  1. Replace the project ID with your GCP project ID  
- 2. Replace the region with your GCP region  
+ 2. Replace the region with your GCP region
+  
 For the bucket  
  1. Replace bucket name with your bucket name  
  2. Replace the bucket location with your bucket location  
+  
 For the dataset  
  1. Replace dataset name with the dataset name  
  2. Replace the project ID with your GCP project ID  
  3. Replace the dataset location with your dataset location  
-
+  
 We also have to paste the contents of our service account json file to the keys/tf_service_account.json file. 
 
 NOTE:
