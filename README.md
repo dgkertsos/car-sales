@@ -58,12 +58,12 @@ For the dataset
 We also have to paste the contents of our service account json file to the keys/tf_service_account.json file. 
 
 NOTE:
-The service account can be created with the following roles:
-    Storage Admin
-    BigQuery Admin
-    Compute Admin
+The service account can be created with the following roles:  
+    Storage Admin  
+    BigQuery Admin  
+    Compute Admin  
     
-Then from the terraform directory we execute:
+Then from the terraform directory we execute:  
 
  ```terraform init```  
  ```terraform plan```  
