@@ -176,9 +176,17 @@ Click Save.
 
 Go to Deploy, Jobs and click on the +Create Job button. Select Deploy Job.
 
-In the Job name field type a name. In the Environment field select Production and finally click the Save button.  
+In the Job name field type a name. In the Environment field select Production. In the More Commands section click Generate docs on run. Finally click the Save button.  
 
-To run the new created job click the Run now button.  
+Go to Settings (Small gear icon), Account settings, projects and click on your project. In the window that opens on the right side click on the Edit button. Then go to the Artifact section and in the Documentation field select the job you created in the previous step. Click on the Save button.  
+
+Go to Develop, Cloud IDE. Edit the schema.yml file which is located in models/staging folder and after the database: word type the name of your BigQuery database. 
+
+Click Save.
+
+Go to Deploy, Jobs and click on the job you have created. 
+
+To run the job click the Run now button.  
 
 We can see the job result by clicking on the job name.
 
