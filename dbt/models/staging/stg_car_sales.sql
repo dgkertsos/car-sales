@@ -10,8 +10,10 @@ renamed as (
 
     select
         year,
-        make,
-        model,
+        replace(upper(case 
+            when make is null then 'UNKNOWN' 
+            else make
+        end), 'TK', 'TRUCK') as make,
         trim,
         body,
         transmission,
@@ -24,8 +26,10 @@ renamed as (
         seller,
         mmr,
         sellingprice,
-        saledate
-
+        case 
+            when saledate is null then '2014-03-01'
+            else saledate
+        end as saledate
     from source
 
 )
