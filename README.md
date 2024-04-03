@@ -12,85 +12,109 @@ https://www.kaggle.com/datasets/syedanwarafridi/vehicle-sales-data
 
 as a zip file.
 
-The file can also be found in the data folder.
+The file can also be found in the project **data** folder.
 
 ## First steps  
 
+For the purposes of this project a Linux machine has been used.
+
 Create a folder in your hard drive:  
 
-mkdir project   
+```mkdir project```   
 
 Change to the folder you just created:  
 
-cd project  
+```cd project```  
 
-Then clone this project by typing:
+Then clone this project by typing:  
 
-git clone https://github.com/dgkertsos/car-sales.git
+```git clone https://github.com/dgkertsos/car-sales.git```
+
+You can see instructions on how to install git on a Linux machine [here](https://github.com/git-guides/install-git)  
 
 ## Create a GCP bucket and a BigQuery Dataset with Terraform  
 
-The GCP bucket will be used to store the data from the car-prices.zip file in a partitioned parquet format. Then the data will be transferred to a BigQuery table which is stored in the created dataset. We will do the transfer with the help of Mage.
+The GCP bucket will be used to store the data from the car-prices.zip file in a parquet format file. Then the data will be transferred to a BigQuery table which is stored in the created dataset. We will do the transfer with the help of Mage.
 
- For this we will use terraform which must be installed on our computer. Then we have to modify the main.tf file located in the terraform folder. We are going to make the following changes:
+For this we will use terraform which must be installed on our computer. 
 
-    1. For the provider
-        a. Replace the project ID with your GCP project ID
-        b. Replace the region with your GCP region
-    2. For the bucket
-        a. Replace bucket name with your bucket name
-        b. Replace the bucket location with your bucket location
-    3. For the dataset
-        a. Replace dataset name with the dataset name
-        b. Replace the project ID with your GCP project ID
-        c. Replace the dataset location with your dataset location
+You can see instructions on how to install terraform on a Linux machine [here](https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli)
+ 
+Then we have to modify the main.tf file located in the terraform folder. We are going to make the following changes:
 
+For the provider  
+ 1. Replace the project ID with your GCP project ID  
+ 2. Replace the region with your GCP region
+  
+For the bucket  
+ 1. Replace bucket name with your bucket name  
+ 2. Replace the bucket location with your bucket location  
+  
+For the dataset  
+ 1. Replace dataset name with the dataset name  
+ 2. Replace the project ID with your GCP project ID  
+ 3. Replace the dataset location with your dataset location  
+  
 We also have to paste the contents of our service account json file to the keys/tf_service_account.json file. 
 
-NOTE:
-The service account can be created with the following roles:
-    Storage Admin
-    BigQuery Admin
-    Compute Admin
+**NOTE**  
+The service account can be created with the following roles:  
+    Storage Admin  
+    BigQuery Admin  
+    Compute Admin  
     
-Then from the terraform directory we execute:
+Then from the terraform directory we execute:  
 
-    terraform init
-    terraform plan
-    terraform apply
+ ```terraform init```  
+ ```terraform plan```  
+ ```terraform apply```  
 
-    Type yes and hit Enter.
+Type yes and hit Enter.  
 
-The bucket is created in our GCP storage and the dataset will be created in our bigquery datasets.
+The bucket is created in our GCP storage and the dataset will be created in our bigquery datasets.  
 
 ## Create pipelines with Mage  
+
+Pipeline **csv_to_gcs** is used to transfer data from the car-prices.zip to the gcp bucket.  
+
+Pipeline **gcs_to_bq** is used to transfer data from the gcp bucket to a BigQuery table.  
 
 Before running Mage do the following changes to the files:  
 
   1. In mage/data_exporters/bl_upload_data_to_gcs.py replace bucket name with your bucket name.
   2. In mage/data_loaders/bl_load_data_from_gcs.py replace bucket name with your bucket name.
   3. Paste the contents of your service account json file to the keys/mage_service_account.json file. 
-     
+
+**NOTE**  
+The service account can be created with the following roles:  
+    Storage Admin  
+    BigQuery Admin  
+    
 Then you run the following commands:  
 
-cd mage  
-cp dev.env .env  
-rm dev.env  
+```cd mage```  
+```cp dev.env .env```  
+```rm dev.env```  
 
 And finally:  
 
-docker-compose up  
+```docker-compose up```  
 
-NOTE  
+**NOTE**  
 You have to install docker first to make the last command run.  
 
-Forward port 6789 on your local machine.  
+You can see instructions on how to install docker engine on a Linux machine [here](https://docs.docker.com/engine/install/)  
 
 Then you can access Mage by typing:  
 
-http://localhost:6789  
+```http://localhost:6789```  
 
 in your browser.
+
+**NOTE**  
+If Linux runs on a virtual machine you have to forward port 6789 on your local machine first.  
+
+You can see instructions on how to forward a port by using VS Code [here](https://kumaranil3921.medium.com/a-step-by-step-guide-to-port-forwarding-with-visual-studio-code-vscode-42a6abff045)  
 
 Select the **csv_to_gcs** pipeline and execute each block one by one or else select the last block, click on **...** and then select **Execute with all upstream blocks**  
 
@@ -101,6 +125,8 @@ Select the **gcs_to_bq** pipeline and execute each block one by one or else sele
 After the pipeline is executed a partitioned table called **car_sales** is created in the **de_zoomcamp_car_sales** dataset and then all the data from the bucket are transfered to this table. There should be 558811 records in the table.  
 
 ## Create a model in dbt Cloud
+
+We will create a model in dbt Cloud because we want to perform some transformations to the data, eg. replace null values.  
 
 In GitHub search for dgkertsos/car-sales, click on the result and then click on the Fork button. Review the settings and click on the Create Fork button.  
 
