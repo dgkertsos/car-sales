@@ -36,22 +36,22 @@ You can see instructions on how to install git on a Linux machine [here](https:/
 
 The GCP bucket will be used to store the data from the car-prices.zip file in a parquet format file. Then the data will be transferred to a BigQuery table which is stored in the created dataset. We will do the transfer with the help of Mage.
 
- For this we will use terraform which must be installed on our computer. 
+For this we will use terraform which must be installed on our computer. 
 
- You can see instructions on how to install terraform on a Linux machine [here](https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli)
+You can see instructions on how to install terraform on a Linux machine [here](https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli)
  
- Then we have to modify the main.tf file located in the terraform folder. We are going to make the following changes:
+Then we have to modify the main.tf file located in the terraform folder. We are going to make the following changes:
 
-    1. For the provider
-        a. Replace the project ID with your GCP project ID
-        b. Replace the region with your GCP region
-    2. For the bucket
-        a. Replace bucket name with your bucket name
-        b. Replace the bucket location with your bucket location
-    3. For the dataset
-        a. Replace dataset name with the dataset name
-        b. Replace the project ID with your GCP project ID
-        c. Replace the dataset location with your dataset location
+For the provider  
+ 1. Replace the project ID with your GCP project ID  
+ 2. Replace the region with your GCP region  
+For the bucket  
+ 1. Replace bucket name with your bucket name  
+ 2. Replace the bucket location with your bucket location  
+For the dataset  
+ 1. Replace dataset name with the dataset name  
+ 2. Replace the project ID with your GCP project ID  
+ 3. Replace the dataset location with your dataset location  
 
 We also have to paste the contents of our service account json file to the keys/tf_service_account.json file. 
 
